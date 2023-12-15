@@ -15,3 +15,6 @@ $ python manage.py runserver ||  $ python3 manage.py runserver
 Skopiuj i wklej link URL do swojej przeglądarki internetowej
 
 Uruchamiam serwer programistyczny pod adresem: http://127.0.0.1:8000/
+
+## Jak uruchomić interfejs administratora
+Gdy aplikacja działa na komputerze lokalnym, przejdź pod ten adres URL: http://127.0.0.1:8000/admin/
