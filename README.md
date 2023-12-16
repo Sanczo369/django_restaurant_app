@@ -5,7 +5,7 @@ Aplikacja internetowa z wykorzystaniem Django do obsługi zamówień internetowy
 - Python
 - css
 - html
-- js
+- javascript
 
 ## Jak uruchomić tę aplikację
 ### Warunki wstępne
