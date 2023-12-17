@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'category',
     'accounts',
     'bootstrap5',
+    'store',
 ]
 
 MIDDLEWARE = [
