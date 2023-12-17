@@ -1,5 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<p>Home</p>   
+<div class="container">
+    <table class="table">
+      <thead>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nazwa</th>
+          <th scope="col">Skład</th>
+          <th scope="col">Cena</th>
+      </tr>
+      </thead>
+      <tbody>
+          {% for beverage in beverages%}          
+      <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>{{beverage.product_name}}</td>
+          <td>{{ beverage.ingredients }}</td>
+          <td>{{ beverage.price }}</td>
+      </tr>
+      {% endfor%}
+      </tbody>
+    </table>
+</div>
 {% endblock %}
