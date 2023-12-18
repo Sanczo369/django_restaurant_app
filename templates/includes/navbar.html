@@ -1,20 +1,19 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-black bg-light">
     <div class="container-fluid">
       <!-- Adres i ikony -->
       <div class="d-flex">
         <p class="navbar-text">
-          <i class="bi bi-geo-alt"></i> Adres Restauracji, 
-          <i class="bi bi-telephone"></i> Numer Telefonu
+          <i class="fas fa-map-pin"></i> ul. Długa 1, 50-255 Wrocław
         </p>
       </div>
   
       <!-- Ikony społecznościowe -->
       <div class="d-flex">
-        <a class="navbar-brand" href="#"><i class="bi bi-facebook"></i></a>
-        <a class="navbar-brand" href="#"><i class="bi bi-twitter"></i></a>
-        <a class="navbar-brand" href="#"><i class="bi bi-instagram"></i></a>
-        <a class="navbar-brand" href="#"><i class="bi bi-tripadvisor"></i></a>
+        <a class="navbar-brand" href="#"><i class="fab fa-facebook"></i></a>
+        <a class="navbar-brand" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="navbar-brand" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="navbar-brand" href="#"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
   </nav>
@@ -22,7 +21,7 @@
   <!-- Nawigacja -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Restauracja Ravier</a>
+      <a class="navbar-brand" href="#">Italia</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,9 +30,14 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
-          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="menuDropdown">
+              <a class="dropdown-item" href="#">Napoje</a>
+              <a class="dropdown-item" href="#">Jedzenie</a>
+            </div>
           <li class="nav-item">
             <a class="nav-link" href="#">Reservation</a>
           </li>
