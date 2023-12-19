@@ -1,5 +1,6 @@
 from django.db import models
 from category.models import Category
+from multiselectfield import MultiSelectField
 
 # Create your models here.
 class Product(models.Model):
@@ -23,7 +24,8 @@ class Product(models.Model):
         ('P', 'Pszenica'),
         ('Sk', 'Skorupiaki'),
     ]
-    allergen = models.CharField(max_length=500, choices=ALLEGEN_CHOICES, blank=True, null=True)
+    allergen = MultiSelectField(choices=ALLEGEN_CHOICES, blank=True, null=True, max_choices=6,
+                                 max_length=6)
     
     
     def __str__(self):
