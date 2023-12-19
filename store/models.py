@@ -17,11 +17,11 @@ class Product(models.Model):
     modified_date   = models.DateTimeField(auto_now=True)
     
     ALLEGEN_CHOICES = [
-        ('M', 'Mleko'),
+        ('N', 'Nabiał'),
         ('J', 'Jajka'),
         ('O', 'Orzechy'),
         ('S', 'Soja'),
-        ('P', 'Pszenica'),
+        ('G', 'Gluten'),
         ('Sk', 'Skorupiaki'),
     ]
     allergen = MultiSelectField(choices=ALLEGEN_CHOICES, blank=True, null=True, max_choices=6,
