@@ -1,0 +1,9 @@
+{% autoescape  off %}
+
+Witam {{user.first_name}},
+
+Potwierdź swój adres e-mail klikająć w link poniżej, aby aktywować konto.
+http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+Jeśli to nie Ty, Zignoruj tą wiadomość.
+
+{% endautoescape %}
