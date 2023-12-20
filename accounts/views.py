@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages, auth
+from .forms import RegistrationForm
 
 # Create your views here.
 def login(request):
@@ -8,7 +9,11 @@ def login(request):
 
 
 def register(request):
-    return render(request, 'accounts/register.html')
+    form = RegistrationForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'accounts/register.html',context)
 
 @login_required(login_url = 'login')
 def logout(request):
