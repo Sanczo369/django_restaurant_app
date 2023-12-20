@@ -7,6 +7,21 @@ from .forms import RegistrationForm
 
 # Create your views here.
 def login(request):
+    if request.method =='POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        
+        user = auth.authenticate(email=email, password=password)
+        
+        if user is not None:
+            
+            auth.login(request, user)
+            return redirect('home')
+    
+            
+        else:
+            messages.error(request, 'Nieprawidłowe dane logowania')
+            return redirect('login')
     return render(request, 'accounts/login.html')
 
 
