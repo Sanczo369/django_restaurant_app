@@ -9,36 +9,38 @@
           <article class="card-body">
             <header class="mb-4"><h4 class="card-title">Rejestracja</h4></header>
             
-            <form method="POST">
+            <form action={% url 'register' %} method="POST">
+                {{form.non_field_errors}}  
+                {% csrf_token %}
                     <div class="form-row">
                         <div class="col form-group">
                             <label>Imię</label>
-                        
+                            {{form.first_name}}
                         </div> <!-- form-group end.// -->
                         <div class="col form-group">
                             <label>Nazwisko</label>
-                            
+                            {{form.last_name}}
                         </div> <!-- form-group end.// -->
                     </div> <!-- form-row end.// -->
                     <div class="form-row">
                         <div class="form-group col-md-6">
                           <label>Adres Email</label>
-                          
+                          {{form.email}}
                         </div> <!-- form-group end.// -->
                         <div class="form-group col-md-6">
                           <label>Numer Telefonu</label>
-                          
+                          {{form.phone_number}}
                         </div> <!-- form-group end.// -->
                     </div> <!-- form-row.// -->
-                    
+                    {{form.non_field_errors}} 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Hasło</label>
-                            
+                            {{form.password}}
                         </div> <!-- form-group end.// --> 
                         <div class="form-group col-md-6">
                             <label>Powtórz Hasło</label>
-                            
+                            {{form.confirm_password}}
                         </div> <!-- form-group end.// -->
                   
                     </div>
