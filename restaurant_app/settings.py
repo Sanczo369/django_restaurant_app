@@ -139,3 +139,11 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+# Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.poczta.onet.pl'
+EMAIL_PORT = 465
+EMAIL_HOST_USER ='test.test.test@vp.pl'
+EMAIL_HOST_PASSWORD = 'Proview-2'
+EMAIL_USE_SSL = True
