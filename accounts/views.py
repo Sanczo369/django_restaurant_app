@@ -51,3 +51,8 @@ def logout(request):
     auth.logout(request)
     messages.success(request, 'Zostałeś wylogowany.')
     return render(request, 'accounts/login.html')
+
+
+
+def forgotPassword(request):
+    return render(request, 'accounts/forgotPassword.html')
