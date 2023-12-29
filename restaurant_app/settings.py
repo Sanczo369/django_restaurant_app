@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'store',
     'carts',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
